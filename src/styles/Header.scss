@@ -1,0 +1,82 @@
+.header {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgb(255, 255, 255);
+    width: 100%;
+   // box-shadow: 0 0 12px rgba(0, 0, 0, 0.432);
+    &-structure {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 20px 0px 20px;
+        max-width: 1240px;
+        justify-content: space-between;
+        align-items: center;  
+    }
+}
+.logoSite {
+    height: 45px;
+    padding-top: 7px;
+}
+.navBarre {
+    & ul {
+        list-style-type: none;
+        display: flex;
+        margin: 5px 0;
+        padding: 0;
+    }
+    & li {
+        padding-left: 30px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    & a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+//--------Mode Desktop--------
+@media screen and (min-width: 700px) {
+    .navBarre-logo {
+    display: none;
+    }
+    .navBarre {
+        & a {
+            border-bottom: solid 2px rgba(0, 0, 0, 0);
+            &:hover {
+                transition: 1.1s ease;
+                border-bottom: solid 2px black;
+            }
+        }
+    }
+}
+
+//------Mode Téléphone--------
+@media screen and (max-width: 700px) {
+    .navBarre-text {
+        display: none;
+    }
+    .logoSite {
+        height: 33px;
+    }
+    .header {
+        margin: 0;
+            &-structure {
+                padding: 0px 10px;
+            }
+        }
+    .navBarre {
+        & ul {
+            margin: 0;
+            padding: 0;
+        }
+        & li {
+            font-size: 21px;
+        }
+    }
+}
