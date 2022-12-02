@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     z-index: 10;
-    background: rgb(255, 255, 255);
+    background: #f4f7f6;
     width: 100%;
    // box-shadow: 0 0 12px rgba(0, 0, 0, 0.432);
     &-structure {
@@ -30,6 +30,7 @@
         padding: 0;
     }
     & li {
+        text-transform: uppercase;
         padding-left: 30px;
         font-size: 18px;
         font-weight: 500;
@@ -48,8 +49,9 @@
     .navBarre {
         & a {
             border-bottom: solid 2px rgba(0, 0, 0, 0);
+            transition: 1.1s ease;
             &:hover {
-                transition: 1.1s ease;
+                
                 border-bottom: solid 2px black;
             }
         }

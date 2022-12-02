@@ -1,4 +1,5 @@
 import "../../styles/Card.scss"
+import "../../styles/Home.scss"
 import logoBooki from "../../assets/logo-projets/Booki.png"
 import logoOhmyfood from "../../assets/logo-projets/ohmyfood.png"
 import logoPanthere from "../../assets/logo-projets/panthere.png"
@@ -9,7 +10,7 @@ import logoKasa from "../../assets/logo-projets/Kasa.png"
 import logoHTML from "../../assets/logo-langage/HTML5_logo.png"
 import logoCSS from "../../assets/logo-langage/CSS3_logo-redim.png"
 import logoSass from "../../assets/logo-langage/Sass.png"
-import logoJS from "../../assets/logo-langage/JS-logo.png"
+import logoJS from "../../assets/logo-langage/JavaScript-logo.png"
 import logoNodeJs from "../../assets/logo-langage/nodeJs.png"
 import logoMongoDB from "../../assets/logo-langage/mongodb.png"
 import logoExpress from "../../assets/logo-langage/express.png"
@@ -22,13 +23,18 @@ import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons"
 
 function Card () {
 
+
     function handleMouseMove2(ev) {
+        var mediaQueries = window.matchMedia("(min-width: 700px)");
+        if (mediaQueries.matches) {
         const ele = ev.currentTarget;
-        let xAxis = (ev.clientX - ele.getBoundingClientRect().left - (ele.getBoundingClientRect().right - ele.getBoundingClientRect().left)/2) / -20;
-        let yAxis = (ev.clientY - ele.getBoundingClientRect().top - (ele.getBoundingClientRect().bottom - ele.getBoundingClientRect().top)/2) / 20;
+        //ev.currentTarget.classList.toggle('test');
+        let xAxis = (ev.clientX - ele.getBoundingClientRect().left - (ele.getBoundingClientRect().right - ele.getBoundingClientRect().left)/2) / -13;
+        let yAxis = (ev.clientY - ele.getBoundingClientRect().top - (ele.getBoundingClientRect().bottom - ele.getBoundingClientRect().top)/2) / 18;
 
         ele.style.transform = `perspective(800px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
         ele.style.boxShadow= '0 20px 20px rgb(0 0 0 / 15%), 0 0 50px rgb(0 0 0 / 10%)'
+        }
     }
 
     function handleMouseEnter(e) {
@@ -40,7 +46,8 @@ function Card () {
         e.currentTarget.style.boxShadow = '0 15px 20px rgb(0 0 0 / 15%)'
     }
     return (
-        
+<section className="structure">
+    <h2 className="titre">Découvrez mes projets</h2> 
     <div className="section-card">
         <div className="container" onMouseMove={(ev) => handleMouseMove2(ev)} onMouseLeave={(e) => handleMouseLeave(e)} onMouseEnter={(e) => handleMouseEnter(e)}>
             <div className="couleur-card">
@@ -216,9 +223,8 @@ function Card () {
                 <a className="moreInfo" href="https://edgar-jallier.github.io/P2-Booki/" target="_blank" rel="noopener noreferrer">Explorer<div className="icon-link"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></div></a>
             </div>
         </div>  
-
     </div>
-        
+</section>     
     )
 }
 

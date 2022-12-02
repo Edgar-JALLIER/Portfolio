@@ -1,0 +1,43 @@
+.global {
+    padding: 0 20px;
+    overflow: hidden;
+}
+.structure {
+    padding-top: 70px;
+    position: relative;
+}
+.titre {
+    font-family: 'Sorren-Medium';
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 80px;
+    background: url("../assets/sable3.jpg") center/cover;
+    mix-blend-mode: darken;
+    border-radius: 20px;
+    padding: 20px 60px 80px 60px;
+    margin: 0px 0 10px 0;
+    color: #AB6F4B;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 7px;
+}
+@media screen  and (max-width: 700px) {
+    .global {
+    margin: 0 10px;
+    padding: 0;
+    }
+
+    .structure {
+        padding-top: 55px;
+    }
+
+    .titre {
+        font-size: 42px;
+        border-radius: 10px;
+        padding: 10px 10px 50px 10px;
+        margin-bottom: 30px;
+    }
+}
