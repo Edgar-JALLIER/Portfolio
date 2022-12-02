@@ -1,5 +1,4 @@
 import "../../styles/Accueil.scss"
-import { Document, Page } from 'react-pdf'
 import Photo from "../../assets/PP.jpg"
 import MovingComponent from 'react-moving-text'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
