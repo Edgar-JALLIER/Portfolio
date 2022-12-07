@@ -1,0 +1,185 @@
+.structure-contact {
+    padding-top: 58px;
+}
+
+.position-contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-trajet {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    & img {
+        width: 50%;
+    }
+}
+
+.infos-contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+    & p {
+        font-family: "La Belle Aurore", cursive;
+        font-size: clamp(20px, 4vw, 35px);
+        margin: 0;
+        text-align: center;
+
+    }
+    & .paragraphe-spe {
+        margin-bottom: 0px;
+    }
+}
+
+.div-boutton {
+    position: relative;
+    &::before {
+        content: "";
+        background: url(../assets/fleche-incurvee-droite1.png) center/cover;
+        filter: opacity(0.4);
+        width: 45px;
+        height: 22px;
+        position: absolute;
+        left: -60px;
+        top: 15px;
+        transform: rotate(40deg);
+    }
+    &::after {
+        content: "";
+        background: url(../assets/fleche-incurvee-bas1.png) center/cover;
+        filter: opacity(0.4);
+        width: 45px;
+        height: 22px;
+        position: absolute;
+        right: -60px;
+        top: 15px;
+        transform: rotate(140deg);
+    }
+}
+
+.boutton-contact {
+    display: block;
+    margin: 20px 0 5px 0;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    
+    & span{
+        position: relative;
+        z-index: 2;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #000000;
+        transition: all .35s;
+    }
+    &:hover{
+        color: #fff;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+  }
+   #mail {
+    font-family: 'Poppins', cursive;
+    font-size: 12px;
+    color: #00000096;
+   }
+  
+.footer {
+    border-top: 1px solid black;
+    width: 90%;
+    padding: 10px 10px;
+    &-position-logo {
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        align-items: center;
+        margin:20px 0;
+        padding: 0;
+        
+    }
+    & .logo-link {
+        display: flex;
+        font-size: 40px;
+        color: black;
+        & img {
+            width: 40px;
+        }
+    }
+    &-text {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+}
+  
+@media screen  and (max-width: 700px) { 
+    .div-trajet {
+        margin-bottom: 10px;
+    }
+    .infos-contact {
+        margin-bottom: 150px;
+        & p {
+            font-family: "Poppins", cursive;
+            font-size: clamp(14px, 4vw, 22px);
+            margin: 0;
+            text-align: center;
+    
+        }
+    }
+    .div-boutton {
+        &::before {
+            width: 35px;
+            height: 17px;
+            left: -45px;
+            top: 20px;
+        }
+        &::after {
+            width: 35px;
+            height: 17px;
+            right: -45px;
+            top: 20px;
+        }
+    }
+
+    .footer {
+        width: 100%;
+        &-position-logo {
+            justify-content: space-around;
+            margin:20px 0;
+            padding: 0;
+        }
+        & .logo-link {
+            display: flex;
+            font-size: 33px;
+            color: black;
+            & img {
+                width: 37px;
+            }
+        }
+        &-text {
+            text-align: center;
+            font-size: 13px;
+            margin-top: 30px;
+        }
+    }
+}

@@ -13,9 +13,7 @@ import logoSass from "../../assets/logo-langage/Sass.png"
 import logoJS from "../../assets/logo-langage/JavaScript-logo.png"
 import logoNodeJs from "../../assets/logo-langage/nodeJs.png"
 import logoMongoDB from "../../assets/logo-langage/mongodb.png"
-import logoExpress from "../../assets/logo-langage/express.png"
 import logoReact from "../../assets/logo-langage/react.png"
-import logoReactRouter from "../../assets/logo-langage/react-router.png"
 
 
 
@@ -30,13 +28,13 @@ function Accueil () {
                     dataText={[
                         "Besoin d'un alternant ?",
                         //"Vous êtes dans la bonne direction",
-                        "Découvrez qui je suis !"
+                        "Vous êtes sur la bonne voie !"
                     ]} />
             </div>
             <div className="links">
                 <a href="https://www.linkedin.com/in/edgar-jallier/"><div className="link link--linkedin"><FontAwesomeIcon icon={faLinkedinIn} /></div></a>
                 <a href="https://github.com/Edgar-JALLIER"><div className="link link--github"><FontAwesomeIcon icon={faGithub} /></div></a>
-                <a href="CV-Edgar-Jallier.pdf" download="CV-Edgar-JALLIER"><div className="link link--CV"><img src={logoCV} alt="CV" /></div></a>
+                <a href="CV-Edgar-Jallier.pdf"><div className="link link--CV"><img src={logoCV} alt="CV" /></div></a>
             </div>
         </div>
         <div className="div-name-link">

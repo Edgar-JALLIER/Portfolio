@@ -1,0 +1,119 @@
+.container {
+    &-experiences {
+        margin-top: 0px;
+        margin-bottom: 35px;
+        padding: 20px 20px 30px 20px;
+        text-transform: uppercase;
+        background: #c0d5f236;
+        border-radius: 20px;
+    }
+}
+.experience-type {
+    margin: 0 0 15px 0;
+    font-size: clamp(17px, 4vw, 27px);
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    &--spe {
+        padding-top: 50px;
+    }
+}
+.experience {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 2px solid #456ea760;
+    border-bottom: 2px solid #456ea760;
+    
+    &--spe {
+        border-bottom: none;
+    }
+}
+
+.experience-part1 {
+    text-align: left;
+    width: 300px;
+    &_date {
+        font-size: clamp(15px, 3vw, 20px);
+        font-style: oblique;
+        margin-bottom: 10px;
+    }
+    &_entreprise {
+        font-size: clamp(18px, 3vw, 22px);
+        font-weight: 600;
+        font-family: 'Raleway', Roboto;
+        color: #1650a1;
+    }
+}
+
+.logo-entreprise {
+    max-width: 65px;
+    width: 9vw;
+    padding: 0 40px;
+    &--EDF {
+        max-width: 50px;
+        width: 9vw;
+        padding: 0 40px;
+    }
+    &--Laposte {
+        max-width: 75px;
+        width: 11vw;
+        padding: 0 40px;
+    }
+}
+
+.experience-part2 {
+    text-align: right;
+    width: 300px;
+    &_durée {
+        font-size: clamp(15px, 3vw, 20px);
+        font-style: oblique;
+        margin-bottom: 10px;
+    }
+    &_poste {
+        font-size: clamp(14px, 3vw, 18px);
+        font-weight: 600;
+        font-family: 'Raleway', Roboto;
+    }
+}
+
+
+@media screen  and (max-width: 550px) {
+    .experience {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .experience-part1 {
+        text-align: center;
+        width: 100%;
+        &_date {
+            margin-bottom: 5px;
+        }
+    }
+    .experience-part2 {
+        text-align: center;
+        width: 100%;
+        &_durée {
+            margin-bottom: 5px;
+        }
+    }
+    .logo-entreprise {
+        width: 45px;
+        padding: 15px 40px;
+        &--EDF {
+            max-width: 60px;
+            width: 40px;
+            padding: 15px 40px;
+        }
+        &--Laposte {
+            max-width: 90px;
+            width: 50px;
+            padding: 15px 40px;
+        }
+    }
+}

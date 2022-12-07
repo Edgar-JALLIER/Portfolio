@@ -33,7 +33,7 @@ function Card () {
         let yAxis = (ev.clientY - ele.getBoundingClientRect().top - (ele.getBoundingClientRect().bottom - ele.getBoundingClientRect().top)/2) / 18;
 
         ele.style.transform = `perspective(800px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
-        ele.style.boxShadow= '0 20px 20px rgb(0 0 0 / 15%), 0 0 50px rgb(0 0 0 / 10%)'
+        ele.style.boxShadow= '0 20px 20px rgb(0 0 0 / 10%), 0 0 50px rgb(0 0 0 / 10%)'
         }
     }
 
@@ -43,11 +43,11 @@ function Card () {
     function handleMouseLeave(e) {
         e.currentTarget.style.transition = `all 0.8s 0.3s cubic-bezier(.5,.29,.36,1.97)`
         e.currentTarget.style.transform = `rotateY(0deg) rotateX(0deg)`
-        e.currentTarget.style.boxShadow = '0 15px 20px rgb(0 0 0 / 15%)'
+        e.currentTarget.style.boxShadow = 'rgb(0 0 0 / 10%) 0px 4px 20px 0px'
     }
     return (
 <section className="structure">
-    <h2 className="titre">Découvrez mes projets</h2> 
+    <h2 className="titre titre--projet">Découvrez mes projets</h2> 
     <div className="section-card">
         <div className="container" onMouseMove={(ev) => handleMouseMove2(ev)} onMouseLeave={(e) => handleMouseLeave(e)} onMouseEnter={(e) => handleMouseEnter(e)}>
             <div className="couleur-card">

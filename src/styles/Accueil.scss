@@ -9,13 +9,13 @@
     align-items: center;
     position: relative;
     &::before {
-        content: '<img class="Bg">';
+        content: '<img>';
         font-family: "La Belle Aurore", cursive;
         color: #a8a8a8;
         font-size: 18px;
         position: absolute;
         font-weight: 400;
-        top: -8px;
+        top: 0px;
         left: -2rem;
     }
     &::after {
@@ -31,7 +31,7 @@
 }
 
 .photo-profil {
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0 0px;
     width: 350px;
     border-radius: 70% 30% 70% 30%/20% 80% 30% 70%;  
 }
@@ -94,6 +94,7 @@
             &::before {
                 content: "";
                 background: url(../assets/fleche-incurvee-droite1.png) center/cover;
+                filter: opacity(0.2);
                 width: 45px;
                 height: 22px;
                 position: absolute;
@@ -115,6 +116,7 @@
             &::before {
                 content: "";
                 background: url(../assets/fleche-dessinee-droite1.png) center/cover;
+                filter: opacity(0.2);
                 width: 45px;
                 height: 20px;
                 position: absolute;
@@ -137,6 +139,7 @@
             &::before {
                 content: "";
                 background: url(../assets/fleche-incurvee-bas1.png) center/cover;
+                filter: opacity(0.2);
                 width: 45px;
                 height: 22px;
                 position: absolute;
@@ -228,11 +231,11 @@
 .typewriter-text {
     margin-top: 0px;
     margin-left: 0px;
-    width: 420px;
+    width: 450px;
     color: #000000;
     font-size: 35px;
     line-height : 1.2em;
-    animation: move 19.6s forwards;
+    animation: move 22.2s forwards;
     //animation: moveBis 11s infinite alternate backwards;
     font-family: "La Belle Aurore", cursive;
     opacity: 0;
@@ -241,7 +244,7 @@
 .arrow-down {
     font-size: 50px;
     text-align: center;
-    animation: arrow 2s infinite;
+    animation: arrow 3s infinite;
     & a {
         color: black;
     }
@@ -277,11 +280,11 @@
 }
 
 @keyframes arrow {
-    20%, 70%{
+    30%, 70%{
        transform: translate(0);
     }
     50% {
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
 }
 
@@ -302,7 +305,7 @@
     .photo-profil-div {
         &::before {
             font-size: 13px;
-            top: -8px;
+            top: 0px;
             left: -2rem;
         }
         &::after {
@@ -370,7 +373,7 @@
 @media screen  and (max-width: 500px) {
     .photo-profil-div {
         &::before {
-            top: -8px;
+            top: 0px;
             left: -2rem;
         }
         &::after {
