@@ -1,475 +1,484 @@
-
 .presentation {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
 .photo-profil-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    &::before {
-        content: '<img>';
-        font-family: "La Belle Aurore", cursive;
-        color: #a8a8a8;
-        font-size: 18px;
-        position: absolute;
-        font-weight: 400;
-        top: 0px;
-        left: -2rem;
-    }
-    &::after {
-        content: "<img/>";
-        font-family: "La Belle Aurore", cursive;
-        color: #a8a8a8;
-        font-size: 18px;
-        font-weight: 400;
-        position: absolute;
-        left: 20rem;
-        bottom: -1rem;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "<img>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    position: absolute;
+    font-weight: 400;
+    top: 0px;
+    left: -2rem;
+  }
+  &::after {
+    content: "<img/>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    left: 20rem;
+    bottom: -1rem;
+  }
 }
 
 .photo-profil {
-    margin: 10px 0 0 0px;
-    width: 350px;
-    border-radius: 70% 30% 70% 30%/20% 80% 30% 70%;  
+  margin: 10px 0 0 0px;
+  width: 350px;
+  border-radius: 70% 30% 70% 30%/20% 80% 30% 70%;
 }
 .div-name-link {
-    max-width: 470px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .name {
-    font-size: 40px;
+  font-size: 40px;
+  margin: 15px 0 25px 0;
+  font-weight: 600;
+  position: relative;
+  &::before {
+    content: "<h2>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    position: absolute;
+    font-weight: 400;
+    margin-top: -8px;
+    left: -2rem;
+  }
+  &::after {
+    content: "<h2/>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    left: -2rem;
+    bottom: -1.2rem;
+  }
+}
+.links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px 0px 10px 10px;
+  //background: rgb(189, 189, 189);
+  //box-shadow: -10px 0px 8px 0px #b4b4b452;
+  & a {
+    color: #ffffff;
+  }
+  & .link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 7px 0 7px 7px;
+    padding: 0px;
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    &--linkedin {
+      background: #0a66c2;
+      &::before {
+        content: "";
+        background: url(../assets/fleche-incurvee-droite1.png) center/cover;
+        filter: opacity(0.2);
+        width: 45px;
+        height: 22px;
+        position: absolute;
+        left: -60px;
+        bottom: 30px;
+        transform: rotate(40deg);
+      }
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+        &:before {
+          transform: translateX(10px) translateY(15px);
+          transition: 0.2s;
+        }
+      }
+    }
+    &--github {
+      background: #000000;
+      &::before {
+        content: "";
+        background: url(../assets/fleche-dessinee-droite1.png) center/cover;
+        filter: opacity(0.2);
+        width: 45px;
+        height: 20px;
+        position: absolute;
+        left: -65px;
+      }
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+        &:before {
+          transform: translateX(13px);
+          transition: 0.2s;
+        }
+      }
+    }
+    &--CV {
+      background: #acacac57;
+      border: solid 1px black;
+      box-sizing: border-box;
+
+      &::before {
+        content: "";
+        background: url(../assets/fleche-incurvee-bas1.png) center/cover;
+        filter: opacity(0.2);
+        width: 45px;
+        height: 22px;
+        position: absolute;
+        left: -60px;
+        bottom: 5px;
+        transform: rotate(320deg);
+      }
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+        &:before {
+          transform: translateX(10px) translateY(-15px);
+          transition: 0.2s;
+        }
+      }
+    }
+    & img {
+      width: 47px;
+    }
+  }
+}
+.paragraphe {
+  max-width: 800px;
+  font-size: 18px;
+  position: relative;
+  text-align: justify;
+  padding-right: 20px;
+  margin: 0;
+  &::before {
+    content: "<p>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -1rem;
+    left: -2rem;
+  }
+  &::after {
+    content: "<p/>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    position: absolute;
+    left: -2rem;
+    bottom: -2rem;
+  }
+}
+
+.langages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0 20px 0;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  &::before {
+    content: "<ul>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    position: absolute;
+    top: -1.2rem;
+    left: -2rem;
+  }
+  &::after {
+    content: "<ul/>";
+    font-family: "La Belle Aurore", cursive;
+    color: #a8a8a8;
+    font-size: 18px;
+    position: absolute;
+    left: -2rem;
+    bottom: -1.4rem;
+  }
+  & .langage img {
+    width: 60px;
+    max-height: 65px;
+  }
+}
+.shine {
+  background: linear-gradient(
+    24deg,
+    #202121,
+    #202121,
+    #202121,
+    #202121,
+    #ddd,
+    #202121,
+    #202121,
+    #202121
+  );
+  background-size: 1600% 1600%;
+  animation: shiny 8s ease infinite;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter-text {
+  margin-top: 0px;
+  margin-left: 0px;
+  font-size: 30px;
+  width: 450px;
+  color: #000000;
+  line-height: 1.2em;
+  // animation: move 22.2s forwards;
+  //animation: moveBis 11s infinite alternate backwards;
+  font-family: "La Belle Aurore", cursive;
+  opacity: 1;
+}
+
+.arrow-down {
+  font-size: 50px;
+  text-align: center;
+  animation: arrow 3s infinite;
+  & a {
+    color: black;
+  }
+}
+@keyframes shiny {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes arrow {
+  30%,
+  70% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .typewriter-text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .accueil {
+    height: 100vh;
+  }
+
+  .presentation {
+    padding-left: 35px;
+  }
+  .photo-profil-div {
+    &::before {
+      font-size: 13px;
+      top: 0px;
+      left: -2rem;
+    }
+    &::after {
+      font-size: 13px;
+      left: 13.8rem;
+      bottom: -1rem;
+    }
+  }
+  .photo-profil {
+    margin: 10px 0 0 0px;
+    width: 250px;
+  }
+  .name {
+    font-size: 35px;
     margin: 15px 0 25px 0;
     font-weight: 600;
     position: relative;
-        &::before {
-            content: "<h2>";
-            font-family: "La Belle Aurore", cursive;
-            color: #a8a8a8;
-            font-size: 18px;
-            position: absolute;
-            font-weight: 400;
-            margin-top: -8px;
-            left: -2rem;
-        }
-        &::after {
-            content: "<h2/>";
-            font-family: "La Belle Aurore", cursive;
-            color: #a8a8a8;
-            font-size: 18px;
-            font-weight: 400;
-            position: absolute;
-            left: -2rem;
-            bottom: -1.2rem;
-        }
-}
-.links {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 10px 0px 10px 10px;
-    //background: rgb(189, 189, 189);
-    //box-shadow: -10px 0px 8px 0px #b4b4b452;
-    & a {
-        color: #ffffff;
-        }
-    & .link {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 32px;
-        margin: 7px 0 7px 7px;
-        padding: 0px;
-        width: 60px;
-        height: 60px;
-        border-radius: 7px;
-        &--linkedin {
-            background: #0A66C2;
-            &::before {
-                content: "";
-                background: url(../assets/fleche-incurvee-droite1.png) center/cover;
-                filter: opacity(0.2);
-                width: 45px;
-                height: 22px;
-                position: absolute;
-                left: -60px;
-                bottom: 30px;
-                transform: rotate(40deg);
-            }
-            &:hover {
-                transform: scale(1.05);
-                transition: 0.2s;
-                &:before{
-                transform: translateX(10px) translateY(15px);
-                transition: 0.2s;
-            }
-        }
-        }
-        &--github {
-            background: #000000;
-            &::before {
-                content: "";
-                background: url(../assets/fleche-dessinee-droite1.png) center/cover;
-                filter: opacity(0.2);
-                width: 45px;
-                height: 20px;
-                position: absolute;
-                left: -65px;
-            }
-            &:hover {
-                transform: scale(1.05);
-                transition: 0.2s;
-                    &:before{
-                transform: translateX(13px);
-                transition: 0.2s;
-                    }
-                }
-        }
-        &--CV {
-            background: #acacac57;
-            border: solid 1px black;
-            box-sizing: border-box;
-            
-            &::before {
-                content: "";
-                background: url(../assets/fleche-incurvee-bas1.png) center/cover;
-                filter: opacity(0.2);
-                width: 45px;
-                height: 22px;
-                position: absolute;
-                left: -60px;
-                bottom: 5px;
-                transform: rotate(320deg);    
-                }
-                    &:hover {
-                transform: scale(1.05);
-                transition: 0.2s;
-                    &:before{
-                transform: translateX(10px) translateY(-15px);
-                transition: 0.2s;
-                    }
-                }
-        }
-        & img {
-            width: 47px;
-        }
+    &::before {
+      font-size: 13px;
+      margin-top: -8px;
+      left: -2rem;
     }
-}
-.paragraphe {
-    max-width: 800px;
-    font-size: 18px;
+    &::after {
+      font-size: 13px;
+      left: -2rem;
+      bottom: -1.2rem;
+    }
+  }
+  .paragraphe {
+    font-size: 16px;
     position: relative;
     text-align: justify;
     padding-right: 20px;
     margin: 0;
     &::before {
-        content: '<p>';
-        font-family: "La Belle Aurore", cursive;
-        color: #a8a8a8;
-        font-size: 18px;
-        position: absolute;
-        margin-top: -1rem;
-        left: -2rem;
+      font-size: 13px;
+      top: 5px;
+      left: -2rem;
     }
     &::after {
-        content: "<p/>";
-        font-family: "La Belle Aurore", cursive;
-        color: #a8a8a8;
-        font-size: 18px;
-        position: absolute;
-        left: -2rem;
-        bottom: -2rem;
+      font-size: 13px;
+      left: -2rem;
+      bottom: -1.5rem;
     }
-}
-
-.langages {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 50px 0 20px 0;
-    list-style-type: none;
+  }
+  .langages {
+    margin: 40px 0 20px 0;
     padding: 0;
-    position: relative;
     &::before {
-        content: '<ul>';
-        font-family: "La Belle Aurore", cursive;
-        color: #a8a8a8;
-        font-size: 18px;
-        position: absolute;
-        top: -1.2rem;
-        left: -2rem;
+      font-size: 13px;
+      top: -1.2rem;
+      left: -2rem;
     }
     &::after {
-        content: "<ul/>";
-        font-family: "La Belle Aurore", cursive;
-        color: #a8a8a8;
-        font-size: 18px;
-        position: absolute;
-        left: -2rem;
-        bottom: -1.4rem;
+      font-size: 13px;
+      left: -2rem;
+      bottom: -1.4rem;
     }
     & .langage img {
-        width: 60px;
-        max-height: 65px;
+      width: 45px;
+      max-height: 50px;
     }
+  }
 }
-.shine {
-    background: linear-gradient(24deg,#202121,#202121,#202121,#202121,#ddd,#202121,#202121,#202121);
-    background-size: 1600% 1600%;
-    animation: shiny 8s ease infinite;
-    font-weight: 700;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.typewriter-text {
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 450px;
-    color: #000000;
-    font-size: 35px;
-    line-height : 1.2em;
-    animation: move 22.2s forwards;
-    //animation: moveBis 11s infinite alternate backwards;
-    font-family: "La Belle Aurore", cursive;
-    opacity: 0;
-}
-
-.arrow-down {
-    font-size: 50px;
-    text-align: center;
-    animation: arrow 3s infinite;
+@media screen and (max-width: 500px) {
+  .photo-profil-div {
+    &::before {
+      top: 0px;
+      left: -2rem;
+    }
+    &::after {
+      left: -2rem;
+      bottom: -0.5rem;
+    }
+  }
+  .photo-profil {
+    margin: 15px 0 0 -10px;
+    width: 55vw;
+  }
+  .links {
     & a {
-        color: black;
+      color: #ffffff;
     }
-}
-@keyframes shiny {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
-}
-
-@keyframes move {
-    0% {
-       opacity: 1;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
-    100% {
-        display: none;
-    }
-}
-
-@keyframes arrow {
-    30%, 70%{
-       transform: translate(0);
-    }
-    50% {
-        transform: translateY(30px);
-    }
-}
-
-@media screen  and (max-width: 1000px) {
-    .typewriter-text {
-        display: none;
-    }
-}
-
-@media screen  and (max-width: 700px) {
-    .accueil {
-        height: 100vh;
-    }
-    
-    .presentation {
-        padding-left: 35px;
-    }
-    .photo-profil-div {
+    & .link {
+      font-size: 25px;
+      margin: 5px;
+      width: 45px;
+      height: 45px;
+      border-radius: 5px;
+      &--linkedin {
         &::before {
-            font-size: 13px;
-            top: 0px;
-            left: -2rem;
+          content: "";
+          background: url(../assets/fleche-incurvee-droite1.png) center/cover;
+          width: 34px;
+          height: 16.5px;
+          left: -45px;
+          bottom: 25px;
         }
-        &::after {
-            font-size: 13px;
-            left: 13.8rem;
-            bottom: -1rem;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.2s;
+          &:before {
+            transform: translateX(10px) translateY(15px);
+            transition: 0.2s;
+          }
         }
-    }
-    .photo-profil {
-        margin: 10px 0 0 0px;
-        width: 250px; 
-    }
-    .name {
-        font-size: 35px;
-        margin: 15px 0 25px 0;
-        font-weight: 600;
-        position: relative;
-            &::before {
-                font-size: 13px;
-                margin-top: -8px;
-                left: -2rem;
-            }
-            &::after {
-                font-size: 13px;
-                left: -2rem;
-                bottom: -1.2rem;
-            }
-    }
-    .paragraphe {
-        font-size: 16px;
-        position: relative;
-        text-align: justify;
-        padding-right: 20px;
-        margin: 0;
+      }
+      &--github {
         &::before {
-            font-size: 13px;
-            top: 5px;
-            left: -2rem;
+          content: "";
+          background: url(../assets/fleche-dessinee-droite1.png) center/cover;
+          width: 34px;
+          height: 15px;
+          position: absolute;
+          left: -45px;
         }
-        &::after {
-            font-size: 13px;
-            left: -2rem;
-            bottom: -1.5rem;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.2s;
+          &:before {
+            transform: translateX(7px);
+            transition: 0.2s;
+          }
         }
-    }
-    .langages {
-        margin: 40px 0 20px 0;
-        padding: 0;
+      }
+      &--CV {
+        border: solid 1px black;
+
         &::before {
-            font-size: 13px;
-            top: -1.2rem;
-            left: -2rem;
+          content: "";
+          background: url(../assets/fleche-incurvee-bas1.png) center/cover;
+          width: 34px;
+          height: 16.5px;
+          left: -45px;
+          bottom: 2px;
+          transform: rotate(320deg);
         }
-        &::after {
-            font-size: 13px;
-            left: -2rem;
-            bottom: -1.4rem;
+        &:hover {
+          transform: scale(1.05);
+          transition: 0.2s;
+          &:before {
+            transform: translateX(10px) translateY(-15px);
+            transition: 0.2s;
+          }
         }
-        & .langage img {
-            width: 45px;
-            max-height: 50px;
-        }
-    }    
-}
-@media screen  and (max-width: 500px) {
-    .photo-profil-div {
-        &::before {
-            top: 0px;
-            left: -2rem;
-        }
-        &::after {
-            left: -2rem;
-            bottom: -0.5rem;
-        }
+      }
+      & img {
+        width: 37px;
+      }
     }
-    .photo-profil {
-        margin: 15px 0 0 -10px;
-        width: 55vw; 
-    }
-    .links {
-        & a {
-            color: #ffffff;
-            }
-        & .link {
-            font-size: 25px;
-            margin: 5px;
-            width: 45px;
-            height: 45px;
-            border-radius: 5px;
-            &--linkedin {
-                &::before {
-                    content: "";
-                    background: url(../assets/fleche-incurvee-droite1.png) center/cover;
-                    width: 34px;
-                    height: 16.5px;
-                    left: -45px;
-                    bottom: 25px;
-                }
-                &:hover {
-                    transform: scale(1.05);
-                    transition: 0.2s;
-                    &:before{
-                    transform: translateX(10px) translateY(15px);
-                    transition: 0.2s;
-                }
-            }
-            }
-            &--github {
-                &::before {
-                    content: "";
-                    background: url(../assets/fleche-dessinee-droite1.png) center/cover;
-                    width: 34px;
-                    height: 15px;
-                    position: absolute;
-                    left: -45px;
-                }
-                &:hover {
-                    transform: scale(1.05);
-                    transition: 0.2s;
-                        &:before{
-                    transform: translateX(7px);
-                    transition: 0.2s;
-                        }
-                    }
-            }
-            &--CV {
-                border: solid 1px black;
-                
-                &::before {
-                    content: "";
-                    background: url(../assets/fleche-incurvee-bas1.png) center/cover;
-                    width: 34px;
-                    height: 16.5px;
-                    left: -45px;
-                    bottom: 2px;
-                    transform: rotate(320deg);    
-                    }
-                        &:hover {
-                    transform: scale(1.05);
-                    transition: 0.2s;
-                        &:before{
-                    transform: translateX(10px) translateY(-15px);
-                    transition: 0.2s;
-                        }
-                    }
-            }
-            & img {
-                width: 37px;
-            }
-        }
-    }
+  }
 }
 
-@media screen  and (max-width: 450px) {
-
-    .langages {
-        margin: 40px 0 20px 0px;
-        padding: 0;
-        & .langage img {
-            width: 10vw;
-            max-height: 11.1vw;
-        }
+@media screen and (max-width: 450px) {
+  .langages {
+    margin: 40px 0 20px 0px;
+    padding: 0;
+    & .langage img {
+      width: 10vw;
+      max-height: 11.1vw;
     }
-    .arrow-down {
-        font-size: 25px;
-     }
+  }
+  .arrow-down {
+    font-size: 25px;
+  }
 }
