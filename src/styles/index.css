@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Montserrat:wght@600&family=Poppins:wght@300;400&family=Raleway:wght@600&display=swap");
 @import url("https://fonts.cdnfonts.com/css/sorren-medium");
+
 body {
-  margin: 0 auto;
-  max-width: 1280px;
-  font-family: "Poppins", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  cursor: none;
+  background: #f4f7f6;
+  font-family: "Poppins", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f4f7f6;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 * {
